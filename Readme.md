@@ -24,7 +24,7 @@ All parameters supports [grunt.template](https://github.com/cowboy/grunt/blob/ma
 
 ### files ```string|array```
 
-Array of your static files (or string for single file). Newest file will be used to calculate fingerprint.
+Array of your static files (or string for single file). Newest file will be used to calculate fingerprint. Wildcards are supported.
 
 ### filename ```string```
 

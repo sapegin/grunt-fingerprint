@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 		this.requiresConfig([ this.name, target, 'files' ].join('.'));
 
 		var options = this.data,
-			files = Array.isArray(options.files) ? options.files : [options.files],
+			files = grunt.file.expandFiles(options.files),
 			maxFingerprint = 0,
 			done = this.async();
 
