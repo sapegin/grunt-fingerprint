@@ -1,21 +1,22 @@
 # Assets versioning task for Grunt
 
-
 ## Installation
+
+This plugin requires Grunt 0.4.
 
 Install `grunt-fingerprint`:
 
 ```
-npm install grunt-fingerprint
+npm install grunt-fingerprint --save-dev
 ```
 
-Add somewhere in your `grunt.js`:
+Add somewhere in your `Gruntfile.js`:
 
 ```javascript
 grunt.loadNpmTasks('grunt-fingerprint');
 ```
 
-Inside your `grunt.js` file add a section named `fingerprint`. See Parameters section below for details.
+Inside your `Gruntfile.js` file add a section named `fingerprint`. See Parameters section below for details.
 
 
 ## Parameters
@@ -51,14 +52,20 @@ If `template` not specified only fingerprint will be written to file.
 fingerprint: {
   assets: {
     files: [
-      '<config:min.dist.dest>',
-      'css/styles.css'
+      'js/*.js',
+      'css/*.css'
     ],
     filename: 'fingerprint.php',
     template: "<?php define('FINGERPRINT', '<%= fingerprint %>'); ?>"
   }
 }
 ```
+
+## Release History
+
+### 2013-02-18 v0.1.0
+
+* Grunt 0.4 support.
 
 
 ---
