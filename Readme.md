@@ -23,11 +23,11 @@ Inside your `Gruntfile.js` file add a section named `fingerprint`. See Parameter
 
 All parameters supports [grunt.template](https://github.com/cowboy/grunt/blob/master/docs/api_template.md). 
 
-### files ```string|array```
+### src `String|Array`
 
 Array of your static files (or string for single file). Newest file will be used to calculate fingerprint. Wildcards are supported.
 
-### filename ```string```
+### filename `String`
 
 Name of file where fingerprint will be saved. You can use `target` context variable here:
 
@@ -35,7 +35,7 @@ Name of file where fingerprint will be saved. You can use `target` context varia
 filename: '<%= target %>.txt'
 ```
 
-### template ```string```
+### template `String`
 
 Fingerprint file contents template. You can use `fingerprint` context variable here:
 
@@ -51,7 +51,7 @@ If `template` not specified only fingerprint will be written to file.
 ``` javascript
 fingerprint: {
   assets: {
-    files: [
+    src: [
       'js/*.js',
       'css/*.css'
     ],
