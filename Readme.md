@@ -1,5 +1,8 @@
 # Assets versioning task for Grunt
 
+[![Build Status](https://travis-ci.org/sapegin/grunt-fingerprint.png)](https://travis-ci.org/sapegin/grunt-fingerprint)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 ## Installation
 
 This plugin requires Grunt 0.4.
