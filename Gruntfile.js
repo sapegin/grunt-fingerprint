@@ -44,5 +44,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-mocha-test');
 
 	grunt.registerTask('default', ['clean', 'fingerprint', 'mochaTest', 'jshint', 'clean']);
+	grunt.registerTask('build', ['clean', 'fingerprint', 'mochaTest', 'jshint', 'clean']);
 
 };
