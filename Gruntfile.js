@@ -13,8 +13,13 @@ module.exports = function(grunt) {
 				template: "<?php define('FINGERPRINT', '<%= fingerprint %>'); ?>"
 			}
 		},
-		nodeunit: {
-			all: ['test/fingerprint_test.js']
+		mochaTest: {
+			test: {
+				options: {
+					reporter: 'spec'
+				},
+				src: ['test/*.js']
+			}
 		},
 		jshint: {
 			all: ['Gruntfile.js', 'tasks/*.js', 'test/*.js'],
@@ -35,9 +40,9 @@ module.exports = function(grunt) {
 	grunt.loadTasks('tasks');
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-mocha-test');
 
-	grunt.registerTask('default', ['clean', 'fingerprint', 'nodeunit', 'jshint', 'clean']);
+	grunt.registerTask('default', ['clean', 'fingerprint', 'mochaTest', 'jshint', 'clean']);
 
 };

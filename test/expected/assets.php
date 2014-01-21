@@ -1,1 +1,0 @@
-<?php define('FINGERPRINT', '1358795801000'); ?>
