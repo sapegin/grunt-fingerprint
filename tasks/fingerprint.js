@@ -8,37 +8,31 @@
 module.exports = function(grunt) {
 	'use strict';
 
-	var fs = require('fs'),
-		async = grunt.util.async;
+	var fs = require('fs');
+	var crypto = require('crypto');
+	var async = grunt.util.async;
 
 	grunt.registerMultiTask('fingerprint', 'Assets versioning task for Grunt', function() {
 		var target = this.target;
 		var configPrefix = [ this.name, target ].join('.');
 		this.requiresConfig([ configPrefix, 'src' ].join('.'));
 
-		var maxFingerprint = 0;
+		var md5 = crypto.createHash('md5');
 		var done = this.async();
 
 		async.forEach(this.filesSrc, function(file, next) {
 			file = grunt.template.process(file);
-			var fingerprint = getFileFingerprint(file);
-			if (fingerprint > maxFingerprint) {
-				maxFingerprint = fingerprint;
-			}
+			md5.update(grunt.file.read(file));
 			next();
 		}, function() {
 			save({
-				fingerprint: maxFingerprint,
+				fingerprint: md5.digest('hex'),
 				target: target,
 				filename: grunt.config.getRaw([ configPrefix, 'filename' ].join('.')),
 				template: grunt.config.getRaw([ configPrefix, 'template' ].join('.'))
 			}, done);
 		});
 	});
-
-	function getFileFingerprint(filepath) {
-		return fs.statSync(filepath).mtime.getTime();
-	}
 
 	function save(options, done) {
 		var context = {
