@@ -14,8 +14,8 @@ module.exports = function(grunt) {
 
 	grunt.registerMultiTask('fingerprint', 'Assets versioning task for Grunt', function() {
 		var target = this.target;
-		var configPrefix = [ this.name, target ].join('.');
-		this.requiresConfig([ configPrefix, 'src' ].join('.'));
+		var configPrefix = [this.name, target].join('.');
+		this.requiresConfig([configPrefix, 'src'].join('.'));
 
 		var md5 = crypto.createHash('md5');
 		var done = this.async();
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
 			save({
 				fingerprint: md5.digest('hex'),
 				target: target,
-				filename: grunt.config.getRaw([ configPrefix, 'filename' ].join('.')),
-				template: grunt.config.getRaw([ configPrefix, 'template' ].join('.'))
+				filename: grunt.config.getRaw([configPrefix, 'filename'].join('.')),
+				template: grunt.config.getRaw([configPrefix, 'template'].join('.'))
 			}, done);
 		});
 	});
