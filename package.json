@@ -23,7 +23,7 @@
   "main": "tasks/fingerprint.js",
   "scripts": {
     "test": "grunt --stack"
-  },  
+  },
   "engines": {
     "node": "*"
   },
@@ -31,7 +31,8 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.8.0",
-    "grunt-mocha-test": "~0.8.2"
+    "grunt-mocha-test": "~0.8.2",
+    "grunt-contrib-clean": "~0.5.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.2"
