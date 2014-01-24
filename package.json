@@ -21,6 +21,9 @@
     }
   ],
   "main": "tasks/fingerprint.js",
+  "scripts": {
+    "test": "grunt --stack"
+  },  
   "engines": {
     "node": "*"
   },
