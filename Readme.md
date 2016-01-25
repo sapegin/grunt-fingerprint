@@ -1,7 +1,7 @@
 # Assets versioning task for Grunt
 
+[![Powered by You](http://sapegin.github.io/powered-by-you/badge.svg)](http://sapegin.github.io/powered-by-you/)
 [![Build Status](https://travis-ci.org/sapegin/grunt-fingerprint.png)](https://travis-ci.org/sapegin/grunt-fingerprint)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Installation
 
