@@ -20,7 +20,7 @@
     "test": "grunt --stack"
   },
   "engines": {
-    "node": "*"
+    "node": ">=0.10"
   },
   "dependencies": {},
   "devDependencies": {
