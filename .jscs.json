@@ -11,14 +11,12 @@
 	"disallowSpaceAfterObjectKeys": true,
 	"requireCommaBeforeLineBreak": true,
 	"requireOperatorBeforeLineBreak": ["+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-	"disallowLeftStickedOperators": ["?", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-	"requireRightStickedOperators": ["!"],
-	"disallowRightStickedOperators": ["?", ":", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-	"requireLeftStickedOperators": [","],
+	"disallowSpaceAfterBinaryOperators": ["!"],
+	"disallowSpaceBeforeBinaryOperators": [","],
 	"disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
 	"disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
-	"requireSpaceBeforeBinaryOperators": ["==", "===", "!=", "!=="],
-	"requireSpaceAfterBinaryOperators": ["==", "===", "!=", "!=="],
+	"requireSpaceBeforeBinaryOperators": ["?", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
+	"requireSpaceAfterBinaryOperators": ["?", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
 	"requireCamelCaseOrUpperCaseIdentifiers": true,
 	"disallowKeywords": ["with"],
 	"disallowMultipleLineStrings": true,
@@ -31,7 +29,7 @@
 	"maximumLineLength": 140,
 	"safeContextKeyword": "that",
 	"requireDotNotation": true,
-	"validateJSDoc": {
+	"jsDoc": {
 		"checkParamNames": true,
 		"checkRedundantParams": true,
 		"requireParamTypes": true
